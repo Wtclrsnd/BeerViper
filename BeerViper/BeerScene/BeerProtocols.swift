@@ -9,19 +9,25 @@ import Foundation
 
 protocol BeerViewProtocol: AnyObject {
     var presenter: BeerPresenterProtocol! { get set }
+    func presentData(vm: [Beer.InitForm.ViewModel])
 }
 
 protocol BeerInteractorProtocol: AnyObject {
     var manager: BeerAPIProtocol! { get set }
+    func getData()
 }
 
 protocol BeerPresenterProtocol: AnyObject {
     var view: BeerViewProtocol! { get set }
     var interactor: BeerInteractorProtocol! { get set }
     var router: BeerRouterProtocol! { get set }
+    func getData()
+    func performData(response: [Beer.InitForm.Response])
 }
 
 protocol BeerRouterProtocol: AnyObject {}
 
-protocol BeerAPIProtocol: AnyObject {}
+protocol BeerAPIProtocol: AnyObject {
+    func getData(request: URLRequest, completion: @escaping (_ beer: BeerEntity) -> Void)
+}
 

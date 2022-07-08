@@ -20,6 +20,8 @@
 		720C21A52877470600C862B4 /* BeerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C21A42877470600C862B4 /* BeerRouter.swift */; };
 		720C21A72877473700C862B4 /* BeerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C21A62877473700C862B4 /* BeerEntity.swift */; };
 		720C21A92877479400C862B4 /* BeerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C21A82877479400C862B4 /* BeerAPIManager.swift */; };
+		720C21AB2878957900C862B4 /* BeerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720C21AA2878957900C862B4 /* BeerModels.swift */; };
+		720C21AE287897FE00C862B4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 720C21AD287897FE00C862B4 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		720C21A42877470600C862B4 /* BeerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRouter.swift; sourceTree = "<group>"; };
 		720C21A62877473700C862B4 /* BeerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerEntity.swift; sourceTree = "<group>"; };
 		720C21A82877479400C862B4 /* BeerAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAPIManager.swift; sourceTree = "<group>"; };
+		720C21AA2878957900C862B4 /* BeerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720C21AE287897FE00C862B4 /* Kingfisher in Frameworks */,
 				720C21982877453D00C862B4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +95,7 @@
 				720C21A42877470600C862B4 /* BeerRouter.swift */,
 				720C21A62877473700C862B4 /* BeerEntity.swift */,
 				720C21A82877479400C862B4 /* BeerAPIManager.swift */,
+				720C21AA2878957900C862B4 /* BeerModels.swift */,
 			);
 			path = BeerScene;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			name = BeerViper;
 			packageProductDependencies = (
 				720C21972877453D00C862B4 /* SnapKit */,
+				720C21AD287897FE00C862B4 /* Kingfisher */,
 			);
 			productName = BeerViper;
 			productReference = 720C217F287744AE00C862B4 /* BeerViper.app */;
@@ -144,6 +150,7 @@
 			mainGroup = 720C2176287744AE00C862B4;
 			packageReferences = (
 				720C21962877453D00C862B4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				720C21AC287897FE00C862B4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 720C2180287744AE00C862B4 /* Products */;
 			projectDirPath = "";
@@ -180,6 +187,7 @@
 				720C219B287745C400C862B4 /* BeerViewController.swift in Sources */,
 				720C21A3287746FB00C862B4 /* BeerPresenter.swift in Sources */,
 				720C21A72877473700C862B4 /* BeerEntity.swift in Sources */,
+				720C21AB2878957900C862B4 /* BeerModels.swift in Sources */,
 				720C219D287745D000C862B4 /* BeerAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +406,14 @@
 				kind = branch;
 			};
 		};
+		720C21AC287897FE00C862B4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -405,6 +421,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 720C21962877453D00C862B4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		720C21AD287897FE00C862B4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 720C21AC287897FE00C862B4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
