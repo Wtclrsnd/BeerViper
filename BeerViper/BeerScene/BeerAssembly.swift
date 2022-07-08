@@ -10,10 +10,10 @@ import UIKit
 enum BeerAssembly {
     static func build() -> UIViewController {
         let view = BeerViewController()
-        let manger = BeerManager()
+        let manager = BeerManager()
         let router = BeerRouter()
         let presenter = BeerPresenter(view: view, router: router)
-        let interactor = BeerInteractor(presenter: presenter, manager: manger)
+        let interactor = BeerInteractor(presenter: presenter, manager: manager)
 
         view.presenter = presenter
         presenter.interactor = interactor
