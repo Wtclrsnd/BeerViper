@@ -19,6 +19,7 @@ final class BeerCollectionViewCell: UICollectionViewCell {
 
     private lazy var beerImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = .systemPink
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -29,6 +30,8 @@ final class BeerCollectionViewCell: UICollectionViewCell {
         label.font = .boldSystemFont(ofSize: 28)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.textAlignment = .center
+        label.backgroundColor = .systemPink
         return label
     }()
 

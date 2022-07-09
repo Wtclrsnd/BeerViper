@@ -23,9 +23,12 @@ protocol BeerPresenterProtocol: AnyObject {
     var router: BeerRouterProtocol! { get set }
     func getData()
     func performData(response: [Beer.InitForm.Response])
+    func moveToDetail(data: Beer.InitForm.ViewModel)
 }
 
-protocol BeerRouterProtocol: AnyObject {}
+protocol BeerRouterProtocol: AnyObject {
+    func moveToDetail(data: Beer.InitForm.ViewModel)
+}
 
 protocol BeerAPIProtocol: AnyObject {
     func getData(request: URLRequest, completion: @escaping (_ beer: BeerEntity) -> Void)

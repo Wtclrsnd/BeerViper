@@ -47,6 +47,8 @@ final class BeerViewController: UIViewController, BeerViewProtocol {
         collectionView.snp.makeConstraints({ make in
             make.leading.trailing.top.bottom.equalToSuperview()
         })
+        title = "Beer Catalog"
+        navigationController?.navigationBar.tintColor = .systemPink
     }
 }
 
@@ -61,5 +63,9 @@ extension BeerViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.setUpCellData(urlString: beer.imageURL, name: beer.name)
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.moveToDetail(data: beerList[indexPath.row])
     }
 }

@@ -18,6 +18,7 @@ enum BeerAssembly {
         view.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
+        router.viewController = view
         
         return view
     }

@@ -32,4 +32,8 @@ final class BeerPresenter: BeerPresenterProtocol {
 
         view.presentData(vm: viewModel)
     }
+
+    func moveToDetail(data: Beer.InitForm.ViewModel) {
+        router.moveToDetail(data: data)
+    }
 }
